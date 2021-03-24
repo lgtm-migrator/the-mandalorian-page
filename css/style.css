@@ -1,3 +1,8 @@
+:root {
+    --main-font-color: #E6E6E6;
+    --main-bg-color: #303030;
+}
+
 @font-face {
     font-family: "The Mandalorian";
     src: url(../assets/fonts/mandalore.ttf);
@@ -10,11 +15,14 @@
 
 * {
     box-sizing: border-box;
-    color: #E6E6E6;
-    background-color: #303030;
+    color: var(--main-font-color);
+    background-color: var(--main-bg-color);
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0 auto;
     box-sizing: border-box;
 }
@@ -23,7 +31,27 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    padding-right: 8px;
+}
+
+.menu-itens {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    list-style: none;
+    padding: 0 4rem;
+}
+
+.menu-link {
+    text-decoration: none;
+    font-size: 18pt;
+    padding: 0;
+}
+
+.menu-link:hover {
+    color: #b6b6b6;
+    text-decoration: overline;
+    transition: 1s;
 }
 
 .title {
@@ -35,21 +63,24 @@ nav {
     font-family: "The Mandalorian";
 }
 
+.sw-font {
+    font-family: "Star Wars";
+}
+
 h1 {
     margin-top: 3rem;
-    font-family: "Star Wars";
     font-size: 16pt;
     text-align: center;
 }
 
 .pre-title{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     width: 15rem;
     font-size: 16pt;
-    height: 0.2rem;
-    border-bottom: 1px solid #E6E6E6;
+    height: 0.8rem;
+    border-bottom: 1px solid var(--main-font-color);
     margin: 0 auto;
 }
 
@@ -61,30 +92,6 @@ h1 {
 
 img {
     width: 100%;
-}
-.menu-itens {
-    display: flex;
-    list-style: none;
-    width: 100%;
-    justify-content: space-between;
-    padding: 0 20rem;
-}
-
-.menu-link {
-    text-decoration: none;
-    font-size: 18pt;
-    padding: 0;
-}
-
-.menu-itens li {
-    display: inline-flex;
-    font-family: "The Mandalorian";
-}
-
-.menu-link:hover {
-    color: #b6b6b6;
-    text-decoration: overline;
-    transition: 1s;
 }
 
 .all-title {
@@ -107,28 +114,37 @@ img {
     border-radius: 50px 0 50px 0;
 }
 
+#title-characters {
+    width: 100%;
+}
+
 #characters {
     display: grid;
     grid-template-columns: 300px 300px 300px;
-    column-gap: 3rem;
-    row-gap: 3rem;
-    justify-content: center;
-    align-content: center;
+    column-gap: 6rem;
+    grid-column: 1rem;   
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.character-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 350px;
+    list-style: none;
+}
+
+figure {
+    width: 300px;
     margin: 0;
     padding: 0;
 }
 
-.character-item {
-    list-style: none;
-}
-.character-image {
-    width: 300px;
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
 
 .character-image img {
-    height: 300px;
     border-radius: 10px;
     border: 3px solid #E6E6E6;
 }
@@ -145,49 +161,55 @@ figcaption {
 }
 
 .footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
     width: 100%;
-    margin-top: 50px;
-    text-align: center;
-    justify-content: center;
 }
-
+.footer h3 {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
 .social-media-list {
-    list-style: none;
-    width: 150px;
     display: inline-flex;
     justify-content: space-between;
+    list-style: none;
+    width: 150px;
     padding: 0;
-}
-
-h3 {
-    width: 100%;
-    text-align: center;
+    margin: 0;
 }
 
 .social-media-image {
     width: 30px;
 }
 
-@media screen and (min-width: 1281px) {
+@media screen and (max-width: 1281px) {
     #characters {
-        column-gap: 7rem;
+        column-gap: 4rem;
     }
 }
 
 @media screen and (max-width: 1024px) {
+    .menu-itens {
+        padding: 0 5rem;
+    }
+
+    #characters {
+        column-gap: 9rem;
+    }
+
     #characters {
         grid-template-columns: 300px 300px;
-        column-gap: 5rem;
     }   
-    .menu-itens {
-        padding: 0 7rem;
-    }    
 }
 
 @media screen and (max-width: 768px) {
     .menu-itens {
-        padding: 0 3rem;
+        padding: 0 1rem;
     }
+
     #characters {
         grid-template-columns: 300px 300px;
         column-gap: 4rem;
@@ -195,9 +217,6 @@ h3 {
 } 
 
 @media screen and (max-width: 700px) {
-    .menu-itens {
-        padding: 0 0.8rem;
-    }
     #characters {
         grid-template-columns: 300px;     
     }   
