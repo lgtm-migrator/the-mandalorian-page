@@ -2,11 +2,13 @@ const app = new Vue({
     el: '#app',
     data: {
         lightTheme: 'colors-light',
+        rotateIcon: 'rotate'
     },
     methods: {
         setTheme(){
-            const app = this.$refs.app
-            app.classList.toggle(this.lightTheme)
+            this.$refs.app.classList.toggle(this.lightTheme)
+            this.$refs.icon.classList.toggle(this.rotateIcon)
+            this.$refs.image.classList.toggle('character-image-dark')
         }
     },
 })
