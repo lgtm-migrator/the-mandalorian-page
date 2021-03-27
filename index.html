@@ -6,20 +6,25 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Welcome to The Mandalorian Web Page</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
     <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 
 <body>
-    <div class="container">
+    <div id="app" class="colors-default" ref="app">
         <header>
-            <nav class="menu">
+            <nav class="menu colors-default">
+                <div class="theme">
+                    <img class="color-theme" src="assets/images/theme.png" @click="setTheme()" ref="icon" >
+                </div>
                 <ul class="menu-itens">
-                    <li><a class="menu-link md-font" href="#">HOME</a></li>
-                    <li><a class="menu-link md-font" href="#title-article">ABSTRACT</a></li>
-                    <li><a class="menu-link md-font" href="#title-cast">CAST</a></li>
-                    <li><a class="menu-link md-font" href="#title-characters">CHARACTERS</a></li>
+                    <li><a class="menu-link md-font colors-default" href="#">HOME</a></li>
+                    <li><a class="menu-link md-font colors-default" href="#title-article">ABSTRACT</a></li>
+                    <li><a class="menu-link md-font colors-default" href="#title-cast">CAST</a></li>
+                    <li><a class="menu-link md-font colors-default" href="#title-characters">CHARACTERS</a></li>
                 </ul>
             </nav>
             <div class="title">
@@ -29,123 +34,134 @@
             </div>
             <img src="assets/images/main.jpg">
         </header>
+        <section class="about">
+            <h2 id="title-article" class="md-font all-title">ABSTRACT</h2>
+            <article id="article">
+                <p class="p-article">The Mandalorian occurs after the fall of the Empire, as depicted in Return of the
+                    Jedi,
+                    and before the emergence of the First Order, depicted in The Force Awakens, which tells the story of
+                    an
+                    independent Mandalorian bounty hunter "in the far reaches of the galaxy, far away from the authority
+                    of
+                    the New Republic, always looking for ways to make improvements to his armor, until on a mission he
+                    ends
+                    up finding a mysterious being who needs his help, called Grogu, also known as "The Child", and
+                    chooses
+                    to run to protect the baby.While in their quest to learn more about Grogu's origins, they are
+                    pursued by
+                    Moff Gideon.</p>
+            </article>
+            <h2 id="title-cast" class="md-font all-title">CAST</h2>
+            <article id="article">
+                <p class="p-article">The series is filmed at Manhattan Beach Studios in California Filoni directed the
+                    series' first episode, making his live-action directorial debut with Rick Famuyiwa, Deborah
+                    Chow, Bryce Dallas Howard, and Taika Waititi also directing for the first season. Filoni,
+                    Howard, and Famuyiwa returned for the second season, and are joined by Favreau, who was unable
+                    to direct in the first season due to his commitments to The Lion King, Peyton Reed, co-star Carl
+                    Weathers, and Robert Rodriguez.</p>
+                <p class="p-article">In February 2021, Lucasfilm said Gina Carano, a recurring co-star during the first
+                    two
+                    seasons, was no
+                    longer employed by the company. This came after Carano made a social media post comparing being a
+                    Republican in the United States to the treatment of Jewish people during the Holocaust, with
+                    Lucasfilm
+                    saying the post was "abhorrent and unacceptable". Carano had been repeatedly warned about her social
+                    media posts by Lucasfilm executives who reportedly had been looking for a reason to fire her for two
+                    months. The February 2021 posts were "the final straw", and the decision to fire the actress was
+                    made by
+                    Lucasfilm executives rather than Favreau. The Walt Disney Company CEO Bob Chapek said Carano was
+                    fired because her posts did not align with the values of Disney, which he said were "universal" and
+                    not
+                    political.The Hollywood Reporter reported that Carano's role of Cara Dune was not expected to be
+                    recast, though industry insiders felt that was still a possibility due to story and merchandising
+                    reasons. </p>
+            </article>
+        </section>
+
+        <section class="characters">
+            <h2 id="title-characters" class="md-font all-title">CHARACTERS</h2>
+            <ul id="characters">
+                <li class="character-item">
+                    <figure>
+                        <a class="character-image" href="assets/images/characters/the-din-djarin.jpg"><img
+                                ref="image" src="/assets/images/characters/the-din-djarin.jpg"></a>
+                        <figcaption class="md-font">Din Djarin</figcaption>
+                    </figure>
+                </li>
+                <li class="character-item">
+                    <figure>
+                        <a class="character-image" href="assets/images/characters/grogu.png"><img
+                                ref="image" src="/assets/images/characters/grogu.png"></a>
+                        <figcaption class="md-font">Grogu</figcaption>
+                    </figure>
+                </li>
+                <li class="character-item">
+                    <figure>
+                        <a class="character-image" href="assets/images/characters/cara-dune.jpg"><img
+                                ref="image" src="/assets/images/characters/cara-dune.jpg"></a>
+                        <figcaption class="md-font">Cara Dune</figcaption>
+                    </figure>
+                </li>
+                <li class="character-item">
+                    <figure>
+                        <a class="character-image" href="assets/images/characters/greef-karga-.jpeg"><img
+                                ref="image" src="/assets/images/characters/greef-karga-.jpeg"></a>
+                        <figcaption class="md-font">Greef Karga</figcaption>
+                    </figure>
+                </li>
+                <li class="character-item">
+                    <figure>
+                        <a class="character-image" href="assets/images/characters/boba-fett.jpg"><img
+                                ref="image" src="/assets/images/characters/boba-fett.jpg"></a>
+                        <figcaption class="md-font">Boba Fett</figcaption>
+                    </figure>
+                </li>
+                <li class="character-item">
+                    <figure>
+                        <a class="character-image" href="assets/images/characters/bo-katan.jpeg"><img
+                                ref="image" src="/assets/images/characters/bo-katan.jpeg"></a>
+                        <figcaption class="md-font">Bo-Katan</figcaption>
+                    </figure>
+                </li>
+                <li class="character-item">
+                    <figure>
+                        <a class="character-image" href="assets/images/characters/ahsoka-tano.jpeg"><img
+                                ref="image" src="/assets/images/characters/ahsoka-tano.jpeg"></a>
+                        <figcaption class="md-font">Ahsoka Tano</figcaption>
+                    </figure>
+                </li>
+                <li class="character-item">
+                    <figure>
+                        <a class="character-image" href="assets/images/characters/fennec-shand.jpeg"><img
+                                ref="image" src="/assets/images/characters/fennec-shand.jpeg"></a>
+                        <figcaption class="md-font">Fennec Shand</figcaption>
+                    </figure>
+                </li>
+                <li class="character-item">
+                    <figure>
+                        <a class="character-image" href="assets/images/characters/moff-gideon.jpeg"><img
+                                ref="image" src="/assets/images/characters/moff-gideon.jpeg"></a>
+                        <figcaption class="md-font">Moff Gideon</figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </section>
+
+        <footer class="footer">
+            <h3 class="md-font">DEVELOPED BY CRISTIAN PENTEADO - 2021</h3>
+            <ul class="social-media-list">
+                <li class="social-media-item"><a href="https://github.com/cristianpdev" target="_blank"><img
+                            class="social-media-image" src="assets/images/social-medias/gh.svg" alt="Github"></a></li>
+                <li class="social-media-item"><a href="https://twitter.com/cristianpdev" target="_blank"><img
+                            class="social-media-image" src="assets/images/social-medias/tw.svg" alt="Twitter"></a></li>
+                <li class="social-media-item"><a href="https://linkedin.com/in/cristian-penteado-6ab241177/"
+                        target="_blank"><img class="social-media-image" src="assets/images/social-medias/lkd.svg"
+                            alt="Linkedin"></a></li>
+            </ul>
+
+        </footer>
     </div>
-    <section class="about">
-        <h2 id="title-article" class="md-font all-title">ABSTRACT</h2>
-        <article id="article">
-            <p class="p-article">The Mandalorian occurs after the fall of the Empire, as depicted in Return of the Jedi,
-                and before the emergence of the First Order, depicted in The Force Awakens, which tells the story of an
-                independent Mandalorian bounty hunter "in the far reaches of the galaxy, far away from the authority of
-                the New Republic, always looking for ways to make improvements to his armor, until on a mission he ends
-                up finding a mysterious being who needs his help, called Grogu, also known as "The Child", and chooses
-                to run to protect the baby.While in their quest to learn more about Grogu's origins, they are pursued by
-                Moff Gideon.</p>
-        </article>
-        <h2 id="title-cast" class="md-font all-title">CAST</h2>
-        <article id="article">
-            <p class="p-article">The series is filmed at Manhattan Beach Studios in California Filoni directed the
-                series' first episode, making his live-action directorial debut with Rick Famuyiwa, Deborah
-                Chow, Bryce Dallas Howard, and Taika Waititi also directing for the first season. Filoni,
-                Howard, and Famuyiwa returned for the second season, and are joined by Favreau, who was unable
-                to direct in the first season due to his commitments to The Lion King, Peyton Reed, co-star Carl
-                Weathers, and Robert Rodriguez.</p>
-            <p class="p-article">In February 2021, Lucasfilm said Gina Carano, a recurring co-star during the first two
-                seasons, was no
-                longer employed by the company. This came after Carano made a social media post comparing being a
-                Republican in the United States to the treatment of Jewish people during the Holocaust, with Lucasfilm
-                saying the post was "abhorrent and unacceptable". Carano had been repeatedly warned about her social
-                media posts by Lucasfilm executives who reportedly had been looking for a reason to fire her for two
-                months. The February 2021 posts were "the final straw", and the decision to fire the actress was made by
-                Lucasfilm executives rather than Favreau. The Walt Disney Company CEO Bob Chapek said Carano was
-                fired because her posts did not align with the values of Disney, which he said were "universal" and not
-                political.The Hollywood Reporter reported that Carano's role of Cara Dune was not expected to be
-                recast, though industry insiders felt that was still a possibility due to story and merchandising
-                reasons. </p>
-        </article>
-    </section>
-
-    <section class="characters">
-        <h2 id="title-characters" class="md-font all-title">CHARACTERS</h2>
-        <ul id="characters">
-            <li class="character-item">
-                <figure>
-                    <a class="character-image" href="assets/images/characters/the-din-djarin.jpg"><img
-                            src="/assets/images/characters/the-din-djarin.jpg"></a>
-                    <figcaption class="md-font">Din Djarin</figcaption>
-                </figure>
-            </li>
-            <li class="character-item">
-                <figure>
-                    <a class="character-image" href="assets/images/characters/grogu.png"><img
-                            src="/assets/images/characters/grogu.png"></a>
-                    <figcaption class="md-font">Grogu</figcaption>
-                </figure>
-            </li>
-            <li class="character-item">
-                <figure>
-                    <a class="character-image" href="assets/images/characters/cara-dune.jpg"><img
-                            src="/assets/images/characters/cara-dune.jpg"></a>
-                    <figcaption class="md-font">Cara Dune</figcaption>
-                </figure>
-            </li>
-            <li class="character-item">
-                <figure>
-                    <a class="character-image" href="assets/images/characters/greef-karga-.jpeg"><img
-                            src="/assets/images/characters/greef-karga-.jpeg"></a>
-                    <figcaption class="md-font">Greef Karga</figcaption>
-                </figure>
-            </li>
-            <li class="character-item">
-                <figure>
-                    <a class="character-image" href="assets/images/characters/boba-fett.jpg"><img
-                            src="/assets/images/characters/boba-fett.jpg"></a>
-                    <figcaption class="md-font">Boba Fett</figcaption>
-                </figure>
-            </li>
-            <li class="character-item">
-                <figure>
-                    <a class="character-image" href="assets/images/characters/bo-katan.jpeg"><img
-                            src="/assets/images/characters/bo-katan.jpeg"></a>
-                    <figcaption class="md-font">Bo-Katan</figcaption>
-                </figure>
-            </li>
-            <li class="character-item">
-                <figure>
-                    <a class="character-image" href="assets/images/characters/ahsoka-tano.jpeg"><img
-                            src="/assets/images/characters/ahsoka-tano.jpeg"></a>
-                    <figcaption class="md-font">Ahsoka Tano</figcaption>
-                </figure>
-            </li>
-            <li class="character-item">
-                <figure>
-                    <a class="character-image" href="assets/images/characters/fennec-shand.jpeg"><img
-                            src="/assets/images/characters/fennec-shand.jpeg"></a>
-                    <figcaption class="md-font">Fennec Shand</figcaption>
-                </figure>
-            </li>
-            <li class="character-item">
-                <figure>
-                    <a class="character-image" href="assets/images/characters/moff-gideon.jpeg"><img
-                            src="/assets/images/characters/moff-gideon.jpeg"></a>
-                    <figcaption class="md-font">Moff Gideon</figcaption>
-                </figure>
-            </li>
-        </ul>
-    </section>
-
-    <footer class="footer">
-        <h3 class="md-font">DEVELOPED BY CRISTIAN PENTEADO - 2021</h3>
-        <ul class="social-media-list">
-            <li class="social-media-item"><a href="https://github.com/cristianpdev" target="_blank"><img
-                        class="social-media-image" src="assets/images/social-medias/gh.svg" alt="Github"></a></li>
-            <li class="social-media-item"><a href="https://twitter.com/cristianpdev" target="_blank"><img
-                        class="social-media-image" src="assets/images/social-medias/tw.svg" alt="Twitter"></a></li>
-            <li class="social-media-item"><a href="https://linkedin.com/in/cristian-penteado-6ab241177/"
-                    target="_blank"><img class="social-media-image" src="assets/images/social-medias/lkd.svg"
-                        alt="Linkedin"></a></li>
-        </ul>
-
-    </footer>
+    <script src="js/index.js"></script>
 </body>
 
 </html>

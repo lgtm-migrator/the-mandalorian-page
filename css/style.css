@@ -17,20 +17,49 @@
 
 * {
     box-sizing: border-box;
-    color: var(--main-font-color);
-    background-color: var(--main-bg-color);
+
 }
 
 body {
-    display: var(--flex-display);
-    flex-direction: column;
-    align-items: center;
     margin: 0 auto;
     box-sizing: border-box;
 }
 
+#app {
+    display: var(--flex-display);
+    flex-direction: column;
+    align-items: center;
+}
+
+.colors-default {
+    color: var(--main-font-color);
+    background-color: var(--main-bg-color);
+    transition: .5s;
+}
+
+.colors-light {
+    color: var(--main-bg-color); 
+    background-color: var(--main-font-color);
+    transition: .5s;
+}
+.rotate {
+    transform: rotate(180deg);
+    transition: .5s;
+}
+
+.color-theme {
+    width: 20px;
+    height: 20px;
+    background-color: var(--main-font-color);
+    border-radius: 10px;
+    transition: .5s;
+}
+
 nav {
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     top: 0;
     width: 100%;
 }
@@ -42,6 +71,7 @@ nav {
     width: 100%;
     list-style: none;
     padding: 0 4rem;
+    margin: .3rem;
 }
 
 .menu-link {
@@ -56,9 +86,17 @@ nav {
     transition: 1s;
 }
 
+.theme {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem 1rem .2rem;
+}
+
 .title {
     display: block;
-    margin-bottom: 4rem;
+    padding: 1.2rem;
 }
 
 .md-font {
@@ -70,7 +108,7 @@ nav {
 }
 
 h1 {
-    margin-top: 3rem;
+    padding-top: 3rem;
     font-size: 16pt;
     text-align: center;
 }
@@ -97,7 +135,7 @@ img {
 }
 
 .all-title {
-    padding-top: 60px;
+    padding-top: 70px;
     font-size: 40pt;
     text-align: center;
 }
@@ -114,6 +152,7 @@ img {
     color: var(--main-bg-color);
     padding: 1.5rem;
     border-radius: 50px 0 50px 0;
+    border: 1px solid var(--main-bg-color);
 }
 
 #title-characters {
@@ -148,11 +187,12 @@ figure {
 
 .character-image img {
     border-radius: 10px;
-    border: 3px solid var(--main-font-color);
+    border: 1px solid var(--main-font-color);
+    transition: 0.5s;
 }
 
 .character-image img:hover {
-    border: 1px solid var(--main-font-color);
+    border: 0;
     transition: 0.5s;
 }
 
