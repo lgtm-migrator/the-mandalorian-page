@@ -201,6 +201,10 @@ figcaption {
     text-align: center;
 }
 
+.fb-plugin {
+    margin: 5rem;
+}
+
 .footer {
     display: var(--flex-display);
     flex-direction: column;
