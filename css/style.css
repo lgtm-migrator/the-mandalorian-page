@@ -202,7 +202,10 @@ figcaption {
 }
 
 .fb-plugin {
-    margin: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .footer {
