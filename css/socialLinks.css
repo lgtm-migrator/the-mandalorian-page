@@ -1,0 +1,12 @@
+.social-media-list {
+    display: inline-flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 150px;
+    padding: 0;
+    margin: 0;
+}
+
+.social-media-image {
+    width: 30px;
+}
