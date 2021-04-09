@@ -29,7 +29,7 @@
     z-index: 2;
     font-weight: 600;
     top: 1.4rem;
-    transition: .5s;
+    transition: .2s;
 }
 
 .hr-dark {
@@ -44,7 +44,7 @@
 
 .pre-title-light {
     background-color: var(--main-font-color);
-    transition: .5s;
+    transition: .2s;
 }
 
 .main-title {
