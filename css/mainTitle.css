@@ -29,13 +29,22 @@
     z-index: 2;
     font-weight: 600;
     top: 1.4rem;
+    transition: .5s;
 }
 
-hr {
+.hr-dark {
     position: relative;
     top: .6rem;
     width: 15rem;
     z-index: 1;
+}
+.hr-light {
+    border-color: var(--main-bg-color);
+}
+
+.pre-title-light {
+    background-color: var(--main-font-color);
+    transition: .5s;
 }
 
 .main-title {
