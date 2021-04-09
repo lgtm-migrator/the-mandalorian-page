@@ -1,18 +1,18 @@
 .colors-default {
     color: var(--main-font-color);
     background-color: var(--main-bg-color);
-    transition: .5s;
+    transition: .2s;
 }
 
 .colors-light {
     color: var(--main-bg-color);
     background-color: var(--main-font-color);
-    transition: .5s;
+    transition: .2s;
 }
 
 .rotate {
     transform: rotate(180deg);
-    transition: .5s;
+    transition: .2s;
 }
 
 .color-theme {
@@ -20,7 +20,7 @@
     height: 20px;
     background-color: var(--main-font-color);
     border-radius: 10px;
-    transition: .5s;
+    transition: .2s;
 }
 
 .theme {
