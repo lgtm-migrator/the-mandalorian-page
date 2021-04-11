@@ -1,21 +1,24 @@
 <template>
   <div id="app" ref="app" class="colors-default">
     <header-page></header-page>
-    <main-text ></main-text>
+    <main-text></main-text>
     <characters title="Personagens"></characters>
+    <facebook-plugin link="The Mandalorian Page"></facebook-plugin>
   </div>
 </template>
 
 <script>
 import Characters from "./components/Characters.vue";
+import FacebookPlugin from "./components/FacebookPlugin.vue";
 import HeaderPage from "./components/HeaderPage.vue";
-import MainText from './components/MainText.vue';
+import MainText from "./components/MainText.vue";
 import emiter from "./main";
 
 export default {
   name: "app",
   components: {
     Characters,
+    FacebookPlugin,
     HeaderPage,
     MainText,
   },
