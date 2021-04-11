@@ -4,12 +4,14 @@
     <main-text></main-text>
     <characters title="Personagens"></characters>
     <facebook-plugin link="The Mandalorian Page"></facebook-plugin>
+    <footer-page developer="Cristian Penteado"></footer-page>
   </div>
 </template>
 
 <script>
 import Characters from "./components/Characters.vue";
 import FacebookPlugin from "./components/FacebookPlugin.vue";
+import FooterPage from './components/FooterPage.vue';
 import HeaderPage from "./components/HeaderPage.vue";
 import MainText from "./components/MainText.vue";
 import emiter from "./main";
@@ -19,6 +21,7 @@ export default {
   components: {
     Characters,
     FacebookPlugin,
+    FooterPage,
     HeaderPage,
     MainText,
   },
