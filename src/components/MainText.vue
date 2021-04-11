@@ -31,13 +31,13 @@
 </template>
 
 <script>
-import { data } from "../constants.js";
+import { main } from "../constants.js";
 
 export default {
   name: "MainText",
   data: function () {
     return {
-      content: data,
+      content: main,
     };
   },
   methods: {

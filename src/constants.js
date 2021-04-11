@@ -1,4 +1,4 @@
-export const data = {
+export const main = {
     "data": [
         {
             "title": "Premissa",
@@ -13,4 +13,45 @@ export const data = {
         }
     ],
 
+}
+
+export const characters = {
+    "data" : [
+        {
+            "name" : "Din Djarin",
+            "url": "https://the-mandalorian-page.s3.us-east-2.amazonaws.com/personagens/the-din-djarin.jpg",
+        },
+        {
+            "name" : "Grogu",
+            "url": "https://the-mandalorian-page.s3.us-east-2.amazonaws.com/personagens/grogu.png",
+        },
+        {
+            "name" : "Cara Dune",
+            "url": "https://the-mandalorian-page.s3.us-east-2.amazonaws.com/personagens/cara-dune.jpg",
+        },
+        {
+            "name" : "Greef Carga",
+            "url": "https://the-mandalorian-page.s3.us-east-2.amazonaws.com/personagens/greef-karga-.jpeg",
+        },
+        {
+            "name" : "Boba Fett",
+            "url": "https://the-mandalorian-page.s3.us-east-2.amazonaws.com/personagens/boba-fett.jpg",
+        },
+        {
+            "name" : "Bo-Katan",
+            "url": "https://the-mandalorian-page.s3.us-east-2.amazonaws.com/personagens/bo-katan.jpeg",
+        },
+        {
+            "name" : "Ashoka Tano",
+            "url": "https://the-mandalorian-page.s3.us-east-2.amazonaws.com/personagens/ahsoka-tano.jpeg",
+        },
+        {
+            "name" : "Fennec Shand",
+            "url": "https://the-mandalorian-page.s3.us-east-2.amazonaws.com/personagens/fennec-shand.jpeg",
+        },
+        {
+            "name" : "Moff Gideon",
+            "url": "https://the-mandalorian-page.s3.us-east-2.amazonaws.com/personagens/moff-gideon.jpeg",
+        },
+    ]
 }
