@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="">
 
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-68TJJKV737"></script>
@@ -35,29 +35,11 @@
 </head>
 
 <body>
-    <div id="app" class="colors-default" ref="app">
-        <header>
-            <nav class="menu colors-default">
-                <div class="theme">
-                    <img class="color-theme"
-                        src="https://the-mandalorian-page.s3.us-east-2.amazonaws.com/main/theme.png" @click="setTheme()"
-                        ref="icon">
-                </div>
-                <ul class="menu-itens">
-                    <li><a class="menu-link md-font colors-default" href="#">HOME</a></li>
-                    <li><a class="menu-link md-font colors-default" href="#title-article">ABSTRACT</a></li>
-                    <li><a class="menu-link md-font colors-default" href="#title-cast">CAST</a></li>
-                    <li><a class="menu-link md-font colors-default" href="#title-characters">CHARACTERS</a></li>
-                </ul>
-            </nav>
-            <div class="title">
-                <pre class="sw-font sw-pre">Star Wars</pre>
-                <pre class="pre-title" ref="pre">THE</pre>
-                <hr class="hr-dark" ref="hr">
-                <h1 class="main-title md-font">Mandalorian</h1>
-            </div>
-            <img src="https://the-mandalorian-page.s3.us-east-2.amazonaws.com/main/main.jpg">
-        </header>
+    <noscript>
+        <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+                Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
         <section class="about">
             <h2 id="title-article" class="md-font all-title">ABSTRACT</h2>
             <article id="article">
@@ -211,7 +193,7 @@
     <script async defer crossorigin="anonymous"
         src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v10.0&appId=845482559160084&autoLogAppEvents=1"
         nonce="ryG8KI14"></script>
-    <script src="js/index.js"></script>
+    <!-- <script src="js/index.js"></script> -->
 </body>
 
 </html>
