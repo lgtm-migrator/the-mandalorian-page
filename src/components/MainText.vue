@@ -20,10 +20,10 @@
       </section>
     </div>
     <footer>
-      <h3>
+      <h3 class="source">
         Fonte:
         <a href="https://pt.wikipedia.org/wiki/The_Mandalorian" target="__blank"
-          >Wikipedia</a
+          > Wikipedia</a
         >
       </h3>
     </footer>
@@ -68,5 +68,17 @@ export default {
   padding-top: 70px;
   font-size: 40pt;
   text-align: center;
+}
+
+.source {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.source > a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--main-font-color);
 }
 </style>
