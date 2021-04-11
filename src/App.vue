@@ -1,17 +1,20 @@
 <template>
   <div id="app" ref="app" class="colors-default">
     <header-page></header-page>
+    <main-text ></main-text>
   </div>
 </template>
 
 <script>
 import HeaderPage from "./components/HeaderPage.vue";
+import MainText from './components/MainText.vue';
 import emiter from "./main";
 
 export default {
   name: "app",
   components: {
     HeaderPage,
+    MainText,
   },
   mounted() {
     emiter.on("change-theme-app", (value) =>

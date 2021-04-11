@@ -23,9 +23,9 @@ export default {
       iconSetTheme: process.env.VUE_APP_ICON_THEME,
       itens: [
         { item: "HOME", href: "#" },
-        { item: "ABSTRACT", href: "#title-article" },
-        { item: "CAST", href: "#title-cast" },
-        { item: "CHARACTERS", href: "#title-characters" },
+        { item: "PREMISSA", href: "#title-article" },
+        { item: "ELENCO", href: "#title-cast" },
+        { item: "PERSONAGENS", href: "#title-characters" },
       ],
       lightTheme: "colors-light",
       hrLight: "hr-light",
