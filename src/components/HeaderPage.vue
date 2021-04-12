@@ -1,7 +1,11 @@
 <template>
   <header>
     <nav-menu></nav-menu>
-    <main-title star-wars-pre-title="star wars" pre-title="THE" title="Mandalorian"></main-title>
+    <main-title
+      star-wars-pre-title="star wars"
+      pre-title="THE"
+      title="Mandalorian"
+    ></main-title>
     <img :src="mainImage" />
   </header>
 </template>
@@ -9,6 +13,7 @@
 <script>
 import NavMenu from "./NavMenu.vue";
 import MainTitle from "./MainTitle.vue";
+import { mainImage } from "../constants.js";
 
 export default {
   name: "Header",
@@ -18,7 +23,7 @@ export default {
   },
   data: function () {
     return {
-      mainImage: process.env.VUE_APP_MAIN_IMAGE,
+      mainImage,
     };
   },
 };

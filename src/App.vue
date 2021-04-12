@@ -11,7 +11,7 @@
 <script>
 import Characters from "./components/Characters.vue";
 import FacebookPlugin from "./components/FacebookPlugin.vue";
-import FooterPage from './components/FooterPage.vue';
+import FooterPage from "./components/FooterPage.vue";
 import HeaderPage from "./components/HeaderPage.vue";
 import MainText from "./components/MainText.vue";
 import emiter from "./main";

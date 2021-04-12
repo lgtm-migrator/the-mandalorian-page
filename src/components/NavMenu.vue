@@ -1,10 +1,15 @@
 <template>
   <nav class="menu colors-default">
     <div class="theme">
-      <img class="color-theme" ref="icon" :src="iconSetTheme" @click="setTheme"/>
+      <img
+        class="color-theme"
+        ref="icon"
+        :src="iconSetTheme"
+        @click="setTheme"
+      />
     </div>
     <ul class="menu-itens">
-      <li v-for="item in itens" :key="item.item">
+      <li v-for="item in itens.data" :key="item.item">
         <a class="menu-link md-font colors-default" :href="item.href">{{
           item.item
         }}</a>
@@ -14,35 +19,38 @@
 </template>
 
 <script>
-import emiter from '../main';
+import {
+  hrLight,
+  iconSetTheme,
+  lightTheme,
+  navigation,
+  preLight,
+  rotateIcon,
+  sourceLight
+} from "../constants.js";
+import emiter from "../main";
 
 export default {
   name: "MenuItens",
   data: function () {
     return {
-      iconSetTheme: process.env.VUE_APP_ICON_THEME,
-      itens: [
-        { item: "HOME", href: "#" },
-        { item: "PREMISSA", href: "#title-article" },
-        { item: "ELENCO", href: "#title-cast" },
-        { item: "PERSONAGENS", href: "#title-characters" },
-      ],
-      lightTheme: "colors-light",
-      hrLight: "hr-light",
-      preLight: "pre-title-light",
-      rotateIcon: "rotate",
+      iconSetTheme,
+      itens: navigation,
+      lightTheme,
+      hrLight,
+      preLight,
+      rotateIcon,
+      sourceLight,
     };
   },
   methods: {
     setTheme() {
       this.$refs.icon.classList.toggle(this.rotateIcon);
-      emiter.emit('change-theme-app', this.lightTheme);
-      emiter.emit('change-theme-hr-title', this.hrLight);
-      emiter.emit('change-theme-pre-title', this.preLight);
-
-      
+      emiter.emit("change-theme-app", this.lightTheme);
+      emiter.emit("change-theme-hr-title", this.hrLight);
+      emiter.emit("change-theme-pre-title", this.preLight);
+      emiter.emit("change-theme-source", this.sourceLight)
     },
-    
   },
 };
 </script>

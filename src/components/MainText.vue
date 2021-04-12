@@ -2,7 +2,7 @@
   <main class="main-text">
     <div v-for="item in content.data" :key="item.title">
       <header>
-        <h2 id="title-article" class="md-font all-title">
+        <h2 :id="item.href" class="md-font all-title">
           {{ item.title }}
         </h2>
       </header>
@@ -20,7 +20,7 @@
       </section>
     </div>
     <footer>
-      <h3 class="source">
+      <h3 class="source" ref="source">
         Fonte:
         <a href="https://pt.wikipedia.org/wiki/The_Mandalorian" target="__blank"
           > Wikipedia</a
@@ -31,6 +31,7 @@
 </template>
 
 <script>
+import emiter from '../main.js';
 import { main } from "../constants.js";
 
 export default {
@@ -45,6 +46,11 @@ export default {
       return typeof arr == "object";
     },
   },
+  mounted() {
+    emiter.on('change-theme-source', () =>
+      this.$refs.source.classList.toggle('source-light')
+    );
+  }
 };
 </script>
 
@@ -80,5 +86,9 @@ export default {
     text-decoration: none;
     text-transform: uppercase;
     color: var(--main-font-color);
+}
+
+.source-light > a {
+  color: var(--main-bg-color);
 }
 </style>
