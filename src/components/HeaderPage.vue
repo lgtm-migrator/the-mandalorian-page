@@ -30,6 +30,10 @@ export default {
 </script>
 
 <style>
+header {
+  max-width: 100%;
+}
+
 img {
   width: 100%;
 }

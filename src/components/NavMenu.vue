@@ -112,7 +112,7 @@ nav {
 
 .menu-link {
   text-decoration: none;
-  font-size: 18pt;
+  font-size: 16pt;
   padding: 0;
 }
 
