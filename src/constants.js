@@ -21,39 +21,39 @@ export const characters = {
     "data": [
         {
             "name": "Din Djarin",
-            "url": "https://the-mandalorian-page.s3.us-east-2.amazonaws.com/personagens/the-din-djarin.jpg",
+            "url": process.env.VUE_APP_DIN_DJARIN,
         },
         {
             "name": "Grogu",
-            "url": "https://the-mandalorian-page.s3.us-east-2.amazonaws.com/personagens/grogu.png",
+            "url": process.env.VUE_APP_GROGU,
         },
         {
             "name": "Cara Dune",
-            "url": "https://the-mandalorian-page.s3.us-east-2.amazonaws.com/personagens/cara-dune.jpg",
+            "url": process.env.VUE_APP_CARA_DUNE,
         },
         {
             "name": "Greef Carga",
-            "url": "https://the-mandalorian-page.s3.us-east-2.amazonaws.com/personagens/greef-karga-.jpeg",
+            "url": process.env.VUE_APP_GREEF_KARGA,
         },
         {
             "name": "Boba Fett",
-            "url": "https://the-mandalorian-page.s3.us-east-2.amazonaws.com/personagens/boba-fett.jpg",
+            "url": process.env.VUE_APP_BOBA_FETT,
         },
         {
             "name": "Bo-Katan",
-            "url": "https://the-mandalorian-page.s3.us-east-2.amazonaws.com/personagens/bo-katan.jpeg",
+            "url": process.env.VUE_APP_BO_KATAN,
         },
         {
             "name": "Ashoka Tano",
-            "url": "https://the-mandalorian-page.s3.us-east-2.amazonaws.com/personagens/ahsoka-tano.jpeg",
+            "url": process.env.VUE_APP_AHSOKA_TANO,
         },
         {
             "name": "Fennec Shand",
-            "url": "https://the-mandalorian-page.s3.us-east-2.amazonaws.com/personagens/fennec-shand.jpeg",
+            "url": process.env.VUE_APP_FENNEC_SHAND,
         },
         {
             "name": "Moff Gideon",
-            "url": "https://the-mandalorian-page.s3.us-east-2.amazonaws.com/personagens/moff-gideon.jpeg",
+            "url": process.env.VUE_APP_MOFF_GIDEON,
         },
     ]
 }
@@ -61,17 +61,17 @@ export const characters = {
 export const socialMedias = {
     "data": [
         {
-            "img": "https://the-mandalorian-page.s3.us-east-2.amazonaws.com/social-medias/github.svg",
+            "img": process.env.VUE_APP_GITHUB_ICON,
             "url": "https://github.com/cristianpdev",
             "alt": "Github"
         },
         {
-            "img": "https://the-mandalorian-page.s3.us-east-2.amazonaws.com/social-medias/twitter.svg",
+            "img": process.env.VUE_APP_TWITTER_ICON,
             "url": "https://twitter.com/cristianpdev",
             "alt": "Twitter"
         },
         {
-            "img": "https://the-mandalorian-page.s3.us-east-2.amazonaws.com/social-medias/linkedin.svg",
+            "img": process.env.VUE_APP_LINKEDIN_ICON,
             "url": "https://linkedin.com/in/cristian-penteado-6ab241177",
             "alt": "Linkedin"
         },
@@ -92,5 +92,6 @@ export const hrLight = "hr-light";
 export const preLight = "pre-title-light";
 export const sourceLight = "source-light";
 export const rotateIcon = "rotate";
-export const iconSetTheme = "https://the-mandalorian-page.s3.us-east-2.amazonaws.com/main/theme.png";
-export const mainImage = "https://the-mandalorian-page.s3.us-east-2.amazonaws.com/main/main.jpg";
+export const iconSetTheme = process.env.VUE_APP_THEME_IMAGE;
+export const mainImage = process.env.VUE_APP_MAIN_IMAGE;
+export const favicon = process.env.VUE_APP_FAVICON;
