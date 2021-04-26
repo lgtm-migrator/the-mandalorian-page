@@ -31,7 +31,7 @@ export default {
 
 <style>
 header {
-  max-width: 100%;
+  width: 100%;
 }
 
 img {
